@@ -37,6 +37,7 @@ import javax.enterprise.inject.spi.BeanManager;
 import javax.enterprise.inject.spi.BeforeBeanDiscovery;
 import javax.enterprise.inject.spi.Extension;
 import javax.enterprise.inject.spi.ProcessAnnotatedType;
+import javax.enterprise.inject.spi.ProcessSyntheticBean;
 import javax.enterprise.inject.spi.ProcessManagedBean;
 import javax.enterprise.inject.spi.ProcessSyntheticBean;
 import javax.enterprise.util.AnnotationLiteral;
@@ -197,7 +198,7 @@ public class FaultToleranceExtension implements Extension {
                 getRegisteredMethods().add(new BeanMethod(type.getJavaClass(), method.getJavaMember()));
             }
         }
-        }
+    }
 
     /**
      * Registers metrics for all FT methods.
